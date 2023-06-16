@@ -6,7 +6,7 @@
 // import { Person1 } from "./Person1";
 import image1 from "./images/1.png";
 import image2 from "./images/3.png";
-import BulkImages from "./BulkImages";
+import BulkImages from "./BulkImages.json";
 function App() {
   let height = 100;
   let width = 100
@@ -34,7 +34,7 @@ function App() {
       {/* <img src={imageObj.image4} height={height} width={width} /> */}
       {/*---------using json-------- */}
       {
-        BulkImages.map((item) => {
+        BulkImages && BulkImages.map((item) => {
           return (<li key={item.id}>
             <img src={item.img} alt="" width={width} height={height} />
           </li>)
